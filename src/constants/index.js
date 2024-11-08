@@ -1,9 +1,6 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
     express,
     git,
     github,
@@ -11,26 +8,87 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
     nextjs,
     nodejs,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
-    summiz,
     tailwindcss,
     threads,
     typescript
 } from "../assets/icons";
 
+export const education = [
+    {
+        degree: "Bachelor of Technology in Computer Science and Artificial Intelligence",
+        institution: "Newton School of Technology, Rishihood University",
+        date: "2023 - 2027",
+        icon: "path/to/education_icon.png", 
+        iconBg: "#8AC7DB", 
+        points: [
+          "Relevant coursework: Data Structures, Algorithms, Front-end Tech, AI, DBMS.",
+          "Proficient in Java, Python, JavaScript, and React.",
+          "Developed projects in web development, AI, and database management.",
+          "Active member of the university's software and coding club."
+        ]
+    }  
+      ,
+    {
+        degree: "High School",
+        institution: "Roots International School",
+        date: "2020 - 2022",
+        icon: "path/to/school_icon.png", 
+        iconBg: "#FF7F7F", 
+        points: [
+          "Completed Matriculation (Class X) with distinction.",
+          "Completed Intermediate (Class XII) in 2022 with a focus on PCM (Physics, Chemistry, Mathematics).",
+          "Active participant in extracurricular activities, including sports, music, and volunteering."
+        ]
+      }
+      
+  ];
+  
+
 export const skills = [
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
     {
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
+    },
+    {
+        imageUrl: tailwindcss,
+        name: "Tailwind CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: react,
+        name: "React",
+        type: "Frontend",
+    },
+    {
+        imageUrl: nextjs,
+        name: "Next.js",
+        type: "Frontend",
+    },
+    {
+        imageUrl: typescript,
+        name: "TypeScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Backend",
     },
     {
         imageUrl: express,
@@ -48,120 +106,41 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
         imageUrl: mongodb,
         name: "MongoDB",
         type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
     }
 ];
 
 export const experiences = [
-    {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+
     {
         title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        company_name: "NOVAAUTOMATA INNOVATIONS PVT. LTD.",
+        // icon: shopify,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "Aug 2024 - September 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designing and developing the company website",
+            "Generative AI for Business growth.",
+            "Handling front-end tasks.",
+            "Testing and deploying the website."
         ],
     },
+
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Event Coordinator",
+        company_name: "Rishihood University",
+        iconBg: "#FF7F7F",
+        date: "March 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+            "Coordinated Alumni Reunion 2024.",
+            "Managed logistics and event timelines.",
+            "Facilitated collaboration with alumni, industry professionals, and staff.",
+            "Organized Industry Collaboration Meet for networking and partnerships."
+        ]
+    }
+    
 ];
 
 export const socialLinks = [
@@ -173,12 +152,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/manuc108',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/manu108/',
     }
 ];
 
@@ -186,43 +165,40 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'V-Meet',
+        description: ' A platform enabling seamless virtual meetings with secure login, real-time controls, scheduling, recording, and a responsive, user-friendly interface across devices.',
+        codeLink: 'https://github.com/manuc108/v-meet',
+        link: 'https://v-meet-xi.vercel.app/'
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Aura Music',
+        description: 'Built with JavaScript, React, and Tailwind CSS. A Seamless music streaming App with personalized playlists',
+        codeLink: 'https://github.com/manuc108/End-Sem-Apple-Music-Clone---EndSem-Project-Apple-Music-Clone---s19ukuv25f91',
+        link: 'https://664d557ea70573758b8fab50--profound-kitsune-600163.netlify.app/',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Grocery app',
+        description: 'Built with HTML, CSS, JavaScript. Track items you need to buy and those you already have with ease.',
+        codeLink: 'https://github.com/manuc108/GroceryApp',
+        link: 'https://comforting-chaja-d829db.netlify.app/',
     },
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        iconUrl: threads,
+        theme: 'btn-back-green',
+        name: 'Twitter',
+        description: 'Built with HTML and CSS. A Twitter Clone',
+        codeLink: 'https://github.com/manuc108/Twiter',
+        link: 'https://dashing-yeot-f3e69f.netlify.app/',
     },
+
+];
+
+export const resume = [ 
     {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        resumeDownloadLink: '',
     }
 ];
