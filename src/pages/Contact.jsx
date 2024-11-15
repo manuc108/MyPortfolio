@@ -17,6 +17,17 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Check if form data is valid before sending
+    if (!form.name || !form.email || !form.message || !/\S+@\S+\.\S+/.test(form.email)) {
+      showAlert({
+        show: true,
+        text: "Please fill all the fields with valid data 😢",
+        type: "danger",
+      });
+      setLoading(true);
+      return;
+    }
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -40,7 +51,7 @@ const Contact = () => {
           });
 
           setTimeout(() => {
-            hideAlert(false);
+            hideAlert(false); // Corrected hideAlert argument
             setForm({
               name: "",
               email: "",
@@ -50,11 +61,10 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-
+          console.error("Error sending message:", error); // Improved error logging
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: `I didn't receive your message 😢. Please try again later.`,
             type: "danger",
           });
         }
@@ -85,6 +95,7 @@ const Contact = () => {
               onChange={handleChange}
             />
           </label>
+
           <label className="text-black-500 font-semibold">
             Email
             <input
@@ -97,6 +108,7 @@ const Contact = () => {
               onChange={handleChange}
             />
           </label>
+          
           <label className="text-black-500 font-semibold">
             Your Message
             <textarea
@@ -119,14 +131,6 @@ const Contact = () => {
         </form>
       </div>
 
-      {/* Add an Image in place of the 3D fox */}
-      {/* <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] flex justify-center items-center">
-        <img 
-          src="/path/to/your/image.jpg"  // Replace this with your image path
-          alt="Contact Image" 
-          className="object-contain w-full h-auto" // This can be adjusted for responsiveness
-        />
-      </div> */}
     </section>
   );
 };

@@ -6,7 +6,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Manu Vahan</span>
         🙏
         <br />
-        Aspiring Software Engineer from From India 🇮🇳
+        An Aspiring Software Engineer from From India 🇮🇳
 
       </h1>
     );
@@ -15,3 +15,4 @@ const HomeInfo = ({ currentStage }) => {
 };
 
 export default HomeInfo;
+

@@ -5,8 +5,8 @@ import { arrow } from "../assets/icons";
 
 // Project Card Component
 const ProjectCard = ({ project }) => (
-  <div className="lg:w-[400px] w-full" key={project.name}>
-    <div className={`block-container w-12 h-12`}>
+  <div className="lg:w-[400px] w-full sm:w-[300px] xs:w-full" key={project.name}>
+    <div className="block-container w-12 h-12">
       <div className={`btn-back rounded-xl ${project.theme}`} />
       <div className="btn-front rounded-xl flex justify-center items-center">
         <img
@@ -18,8 +18,8 @@ const ProjectCard = ({ project }) => (
     </div>
 
     <div className="mt-5 flex flex-col">
-      <h4 className="text-2xl font-semibold">{project.name}</h4>
-      <p className="mt-2 text-slate-500">{project.description}</p>
+      <h4 className="text-2xl sm:text-xl md:text-2xl font-semibold">{project.name}</h4>
+      <p className="mt-2 text-slate-500 text-sm sm:text-base">{project.description}</p>
       <div className="mt-5 flex items-center gap-2 font-poppins">
         <Link
           to={project.link}
@@ -41,21 +41,18 @@ const ProjectCard = ({ project }) => (
 
 const Projects = () => {
   return (
-    <section className="max-container">
+      <section className="max-container py-16">
       <h1 className="head-text">
-        My{" "}
-        <span className="blue-gradient_text drop-shadow font-semibold">
-          Projects
-        </span>
+        My <span className="blue-gradient_text drop-shadow font-semibold">Projects</span>
       </h1>
 
-      <p className="text-slate-500 mt-2 leading-relaxed">
+      <p className="text-slate-500 mt-5 leading-relaxed">
         I've embarked on many projects throughout the years, but these are
         the ones I hold closest to my heart. Many are open-source, so feel free
         to explore and contribute to the codebase!
       </p>
 
-      <div className="flex flex-wrap my-20 gap-16">
+      <div className="flex flex-wrap justify-center my-20 gap-16">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}

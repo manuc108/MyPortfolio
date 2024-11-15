@@ -46,18 +46,8 @@ const Certificates = () => {
           {certificates.map((cert) => (
             <li key={cert.name} className="p-6 bg-white shadow-md rounded-md hover:bg-gray-50 transition-all">
               <p className="font-semibold text-xl">{cert.name}</p>
-              <p className="text-sm text-gray-500">
-                Issued by {cert.issuer} in {cert.date}
-                
-              </p>
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline mt-3 inline-block"
-              >
-                View Certificate
-              </a>
+              <p className="text-sm text-gray-500">Issued by {cert.issuer} in {cert.date}</p>
+              <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mt-3 inline-block">View Certificate</a>
             </li>
           ))}
         </ul>

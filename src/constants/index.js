@@ -197,8 +197,8 @@ export const projects = [
 
 ];
 
-export const resume = [ 
-    {
-        resumeDownloadLink: '',
-    }
-];
+// export const resume = [ 
+//     {
+//         resumeDownloadLink: '',
+//     }
+// ];

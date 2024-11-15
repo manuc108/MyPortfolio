@@ -1,25 +1,33 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { HomeInfo, Loader } from "../components";
 import { Sky, Plane } from "../models";
 
 const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
-  const [isRotating, setIsRotating] = useState(true); 
+  const [isRotating, setIsRotating] = useState(true);
+  const [biplaneScale, setBiplaneScale] = useState([3, 3, 3]);
+  const [biplanePosition, setBiplanePosition] = useState([0, -2, -4]);
 
+  // Adjust the biplane scale and position based on screen size
   const adjustBiplaneForScreenSize = () => {
     const isMobile = window.innerWidth < 768;
-    return {
-      scale: isMobile ? [1.5, 1.5, 1.5] : [3, 3, 3],
-      position: isMobile ? [0, 0, 0] : [0, -2, -4], 
-    };
+    setBiplaneScale(isMobile ? [1.5, 1.5, 1.5] : [3, 3, 3]);
+    setBiplanePosition(isMobile ? [0, 0, 0] : [0, -2, -4]);
   };
 
-  const { scale: biplaneScale, position: biplanePosition } = adjustBiplaneForScreenSize();
+  // Adjust the biplane on initial load and window resize
+  useEffect(() => {
+    adjustBiplaneForScreenSize();
+    window.addEventListener("resize", adjustBiplaneForScreenSize);
+    return () => {
+      window.removeEventListener("resize", adjustBiplaneForScreenSize);
+    };
+  }, []);
 
   return (
     <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center px-5">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
