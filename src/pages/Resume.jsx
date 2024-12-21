@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CTA } from "../components";
 
-const resumeUrl = "https://drive.google.com/file/d/1nABRHwg-LGwaj4Cg5wCZFwX09pgi9vFy/view?usp=sharing"; 
+const resumeUrl = "https://drive.google.com/file/d/1e8GhtV_yt3z2ynFVXd8ZmiZYLjowaBl9/view?usp=sharing"; 
 
 const Resume = () => {
   const [isDownloading, setIsDownloading] = useState(false);
